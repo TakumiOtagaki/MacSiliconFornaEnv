@@ -1,0 +1,13 @@
+# Python2対応が残っている最終近辺のバージョンをピン留め
+Flask<1.1.5
+Jinja2<3.1
+Werkzeug<1.0
+itsdangerous<2.1
+click<8
+biopython==1.76  # 1.76がPython2.7対応の最終版
+numpy==1.16.6    # Python2対応の最終安定版
+forgi==1.1     # forgi 2.xはPython3専用
+future==0.18.2   # forgi依存（builtinsモジュール提供）
+logging_exceptions==0.1.9  # forgiのmcannotateユーティリティが利用
+beautifulsoup4==4.9.3  # Python2サポートの最終版
+scipy==1.2.3         # Python2対応の最終版（coarse_grain向け）
