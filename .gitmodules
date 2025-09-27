@@ -2,3 +2,7 @@
 	path = forna
 	url = git@github.com:TakumiOtagaki/forna_on_M2MacBook.git
 	branch = develop
+[submodule "app/forna"]
+	path = app/forna
+	url = git@github.com:TakumiOtagaki/forna_on_M2MacBook.git
+	branch = develop
