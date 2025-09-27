@@ -1,4 +1,5 @@
 .DS_Store
 app/viennaRNA*
 app/MC-Annotate*
-app/forna/
+app/server.log
+app/forna.db

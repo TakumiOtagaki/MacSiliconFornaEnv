@@ -3,7 +3,7 @@ services:
     build: .
     platform: linux/amd64
     ports:
-      - "127.0.0.1:8000:8000"   # ホスト:コンテナ
+      - "8000:8000"   # ホスト:コンテナ
     volumes:
       - ./app:/app              # ホットリロード的に編集したい場合
     # 別コマンドにしたければここで command を上書き可能

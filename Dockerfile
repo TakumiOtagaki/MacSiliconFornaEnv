@@ -20,9 +20,9 @@ RUN apt-get -o Acquire::Check-Valid-Until=false update && apt-get install -y --n
 WORKDIR /build
 COPY app/ViennaRNA-2.6.4 /build/ViennaRNA-2.6.4
 WORKDIR /build/ViennaRNA-2.6.4
-RUN ./configure --with-python2 --without-python3 --prefix=/usr/local \
- && make -j"$(nproc)" \
- && make install
+RUN ./configure --with-python2 --without-python3 --disable-mpfr --without-gsl --prefix=/usr/local
+RUN make -j "$(nproc)"
+RUN make install
 
 # Python から確実に見えるようにパスを通す
 ENV PYTHONPATH=/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/site-packages:$PYTHONPATH \
@@ -40,4 +40,5 @@ COPY app/ /app/
 EXPOSE 8000
 
 # デフォルトの起動コマンド（必要に応じて docker-compose 側で上書き可能）
-CMD ["python2", "forna/forna_server.py", "-s", "-d"]
+# CMD ["python2", "forna/forna_server.py", "-s", "-d"]
+CMD ["python2", "forna/forna_server.py", "-s", "-d", "-o", "0.0.0.0", "-p", "8000"]
