@@ -6,8 +6,10 @@ git clone --recurse-submodules git@github.com:TakumiOtagaki/forna_on_M2MacBook.g
 git submodule update --init --recursive
 ```
 
-
+```
 open -a Docker
+make up
+```
 
 # building log
 ## ViennaRNA for python2.7
